@@ -12,13 +12,14 @@ section.hero-sec
       form.hero__contact-us 
         .contact-us__text 
           h3.contact-us__title Оставьте заявку и узнайте о возможности <span class="text_yellow">бесплатного</span> лечения
-          .contanct-us__note Нажимая на кнопку “Получить консультацию” вы соглашаетесь на обработку персональных данных
+          .contanct-us__note.mobile_hidden Нажимая на кнопку “Получить консультацию” вы соглашаетесь на обработку персональных данных
         ul.list.contact-us__labels 
           li.contact-us__label 
             input.contact-us__field(type="text" placeholder="ФИО")
           li.contact-us__label 
-            input.contact-us__field(type="text" placeholder="Телефон")
+            input.contact-us__field(type="text" placeholder="Телефон" data-tel-input)
         button.contact-us__btn(type="submit") Получить консультацию
+        .contanct-us__note.desk_hidden Нажимая на кнопку “Получить консультацию” вы соглашаетесь на обработку персональных данных
 section.cataract-sec.bg_grey
   .container
     .cataract-wrp 
@@ -50,7 +51,7 @@ section.symptoms-sec.bg_blue
         li.symptom
           span.sypmtom__text Побледнение цветов
       ul.sypmtoms__perfomance.list
-        li.symptom__perfomance.active-sypmtom 
+        li.symptom__perfomance.active-symptom 
           figure.perfomance__pic 
             img(src="./app/img/content/symptoms-pic.png", alt="")
         li.symptom__perfomance 
@@ -95,6 +96,13 @@ section.stages-sec.bg_grey
           span.stage__name Зрелая катаракта
           .stage__count.text_uppercase 4-5 стадия полная катаракта
         .stage__desc Хрусталик становится полностью мутным, зрение значительно ухудшается, вплоть до полной слепоты, когда отсутствует предметное зрение и человек различает только свет. На этой стадии незамедлительно следует решить вопрос об операции.
+      li.stage.stage_blue.desk_hidden 
+        .stage__name-block
+          span.stage__name Процесс <br>помутнения хрусталика необратим!
+        .stage__desc 
+          span Не ждите полного созревания катаркты, не теряйте зрение!
+          span.text_sep 
+          span Врачи рекомендуют проводить лечение катаракты, как только она начинает мешать нормальной зрительной жизни.
     .therapy__note 
       figure.therapy__note-pic
         img(src="./app/img/svg/drop.svg", alt="Капля")
@@ -187,8 +195,35 @@ section.about-sec.bg_grey
 section.geo-sec.bg_grey 
   .container 
     h2.geo__title.sec_title У нас проходят бесплатное лечение по ОМС пациенты со всей России!
-    figure.geo__pic 
+    figure.geo__pic.mobile_hidden 
       img(src="./app/img/content/map.png", alt="")
+    ul.desk_hidden.geo__towns.list 
+      li.town Москва
+      li.town Санкт-Петербург
+      li.town Севастополь
+      li.town Орел
+      li.town Тула
+      li.town Ярославль
+      li.town Сыктывкар
+      li.town Воронеж
+      li.town Нижний Новгород
+      li.town Ростов-на-Дону
+      li.town Казань
+      li.town Пермь
+      li.town Краснодар
+      li.town Самара
+      li.town Ижевск
+      li.town Тюмень
+      li.town Ессентуки
+      li.town Волгоград
+      li.town Уфа
+      li.town Екатеринбург
+      li.town Омск
+      li.town Новосибирск
+      li.town Красноярск
+      li.town Иркутск
+      li.town Хабаровск
+      li.town Владивосток
 section.features-sec.bg_blue 
   .container 
     h2.features__title.sec_title Нас выбирают за технологичность и высокую квалификацию
@@ -206,82 +241,118 @@ section.features-sec.bg_blue
 section.docs-sec 
   .container 
     h2.docs__title.sec_title Врачи
-    .docs__slider.swiper.slider 
-      .docs.swiper-wrapper
-        .slide-default.swiper-slide
-          figure.slide__pic 
-            img(src="./app/img/content/doctors.png", alt="")
-          .slide__info
-            span.slide__name Абдурахманова Эльмира Эриковна
-            .slide__about Врач-офтальмолог первой категории, ведущий офтальмохирург
-            .slide__features
-              .slide__feature
-                h4.slide__feature-name Стаж работы
-                span.slide__feature-desc 9 лет
+    .slider-wrp 
+      .docs__slider.swiper.slider 
+        .docs.swiper-wrapper
+          .slide-default.swiper-slide
+            figure.slide__pic 
+              img(src="./app/img/content/doctors.png", alt="")
+            .slide__info
+              span.slide__name Абдурахманова Эльмира Эриковна
+              .slide__about Врач-офтальмолог первой категории, ведущий офтальмохирург
+              .slide__features
+                .slide__feature
+                  h4.slide__feature-name Стаж работы
+                  span.slide__feature-desc 9 лет
+          .slide-default.swiper-slide
+            figure.slide__pic 
+              img(src="./app/img/content/doctors.png", alt="")
+            .slide__info
+              span.slide__name Абдурахманова Эльмира Эриковна
+              .slide__about Врач-офтальмолог первой категории, ведущий офтальмохирург
+              .slide__features
+                .slide__feature
+                  h4.slide__feature-name Стаж работы
+                  span.slide__feature-desc 9 лет
+          .slide-default.swiper-slide
+            figure.slide__pic 
+              img(src="./app/img/content/doctors.png", alt="")
+            .slide__info
+              span.slide__name Абдурахманова Эльмира Эриковна
+              .slide__about Врач-офтальмолог первой категории, ведущий офтальмохирург
+              .slide__features
+                .slide__feature
+                  h4.slide__feature-name Стаж работы
+                  span.slide__feature-desc 9 лет
 
-      .swiper-button-prev.slider-arrow.arrow_left 
-      .swiper-button-next.slider-arrow.arrow_right
+        .swiper-button-prev.slider-arrow.arrow_left 
+        .swiper-button-next.slider-arrow.arrow_right
 section.equipments-sec 
   .container 
     h2.equipments__title.sec_title Оборудование
-    .equipments__slider.swiper.slider 
-      .equipments.swiper-wrapper
-        .slide-default.swiper-slide
-          figure.slide__pic 
-            img(src="./app/img/content/equipment.png", alt="")
-          .slide__info
-            span.slide__name Установка офтальмологическая infiniti Vision System, ALCON (США)
-            .slide__about Офтальмологическая установка является эффективным и надежным оборудованием используемым при микрохирургических операциях по удалению катаракты с возможной последующей имплантацией интраокулярной линзы (ИОЛ). Также прибор применяют при различных паталогиях переднего отдела глаза, при удалении стекловидного тела и коагуляции. На сегодняшний день данная установка пользуется огромным спросом в клиниках по всему миру и считается одним из лучших среди аналогов. 
+    .slider-wrp 
+      .equipments__slider.swiper.slider 
+        .equipments.swiper-wrapper
+          .slide-default.swiper-slide
+            figure.slide__pic 
+              img(src="./app/img/content/equipment.png", alt="")
+            .slide__info
+              span.slide__name Установка офтальмологическая infiniti Vision System, ALCON (США)
+              .slide__about Офтальмологическая установка является эффективным и надежным оборудованием используемым при микрохирургических операциях по удалению катаракты с возможной последующей имплантацией интраокулярной линзы (ИОЛ). Также прибор применяют при различных паталогиях переднего отдела глаза, при удалении стекловидного тела и коагуляции. На сегодняшний день данная установка пользуется огромным спросом в клиниках по всему миру и считается одним из лучших среди аналогов. 
+          .slide-default.swiper-slide
+            figure.slide__pic 
+              img(src="./app/img/content/equipment.png", alt="")
+            .slide__info
+              span.slide__name Установка офтальмологическая infiniti Vision System, ALCON (США)
+              .slide__about Офтальмологическая установка является эффективным и надежным оборудованием используемым при микрохирургических операциях по удалению катаракты с возможной последующей имплантацией интраокулярной линзы (ИОЛ). Также прибор применяют при различных паталогиях переднего отдела глаза, при удалении стекловидного тела и коагуляции. На сегодняшний день данная установка пользуется огромным спросом в клиниках по всему миру и считается одним из лучших среди аналогов. 
+          .slide-default.swiper-slide
+            figure.slide__pic 
+              img(src="./app/img/content/equipment.png", alt="")
+            .slide__info
+              span.slide__name Установка офтальмологическая infiniti Vision System, ALCON (США)
+              .slide__about Офтальмологическая установка является эффективным и надежным оборудованием используемым при микрохирургических операциях по удалению катаракты с возможной последующей имплантацией интраокулярной линзы (ИОЛ). Также прибор применяют при различных паталогиях переднего отдела глаза, при удалении стекловидного тела и коагуляции. На сегодняшний день данная установка пользуется огромным спросом в клиниках по всему миру и считается одним из лучших среди аналогов. 
 
-      .swiper-button-prev.slider-arrow.arrow_left 
-      .swiper-button-next.slider-arrow.arrow_right
+        .swiper-button-prev.slider-arrow.arrow_left 
+        .swiper-button-next.slider-arrow.arrow_right
 section.reviews-sec.bg_grey
   .container
-    h2.reviews__title.sec_title Оборудование
-    .reviews__slider.swiper.slider 
-      .reviews.swiper-wrapper
-        .review.swiper-slide
-          figure.review__pic 
-            img(src="./app/img/content/review.png", alt="")
-          .review__info
-            span.review__text Установка офтальмологическая infiniti Vision System, ALCON (США)
-            h4.review__name Хамидуллина Гульсария Сафиулловна
-            span.review__date 23 ноября 2021
-        .review.swiper-slide
-          figure.review__pic 
-            img(src="./app/img/content/review.png", alt="")
-          .review__info
-            span.review__text Установка офтальмологическая infiniti Vision System, ALCON (США)
-            h4.review__name Хамидуллина Гульсария Сафиулловна
-            span.review__date 23 ноября 2021
-        .review.swiper-slide
-          figure.review__pic 
-            img(src="./app/img/content/review.png", alt="")
-          .review__info
-            span.review__text Установка офтальмологическая infiniti Vision System, ALCON (США)
-            h4.review__name Хамидуллина Гульсария Сафиулловна
-            span.review__date 23 ноября 2021
+    h2.reviews__title.sec_title Отзывы наших пациентов
+    .slider-wrp 
+      .reviews__slider.swiper.slider 
+        .reviews.swiper-wrapper
+          .review.swiper-slide
+            figure.review__pic 
+              img(src="./app/img/content/review.png", alt="")
+            .review__info
+              span.review__text 22.11.2021г. мне сделали укол в вашей клинике “Кузляр” по полису ОМС бесплатно. Очень благодарна коллективу и доктору. Успехов вам в дальнейшей работе и здоровья.
+              h4.review__name Хамидуллина Гульсария Сафиулловна
+              span.review__date 23 ноября 2021
+          .review.swiper-slide
+            figure.review__pic 
+              img(src="./app/img/content/review.png", alt="")
+            .review__info
+              span.review__text Установка офтальмологическая infiniti Vision System, ALCON (США)
+              h4.review__name Хамидуллина Гульсария Сафиулловна
+              span.review__date 23 ноября 2021
+          .review.swiper-slide
+            figure.review__pic 
+              img(src="./app/img/content/review.png", alt="")
+            .review__info
+              span.review__text 22.11.2021г. мне сделали укол в вашей клинике “Кузляр” по полису ОМС бесплатно. Очень благодарна коллективу и доктору. Успехов вам в дальнейшей работе и здоровья.
+              h4.review__name Хамидуллина Гульсария Сафиулловна
+              span.review__date 23 ноября 2021
 
-      .swiper-button-prev.slider-arrow.arrow_left 
-      .swiper-button-next.slider-arrow.arrow_right
+        .swiper-button-prev.slider-arrow.arrow_left 
+        .swiper-button-next.slider-arrow.arrow_right
 section.bid-sec.bg_blue 
-  .container 
-    .bid__block 
-      h2.bid__title.sec_title 
-        span Запишитесь на операция
+  .container
+    .bid-wrp 
+      .bid__block 
+        h2.bid__title.sec_title 
+          span Запишитесь на операция
+          span.text_sep 
+          span прямо сейчас!
+        form.bid__form
+          label.bid__form-label 
+            input.bid__form-field(type="text" placeholder="Ваше имя")
+          label.bid__form-label 
+            input.bid__form-field(type="text" placeholder="Ваш телефон" data-tel-input)
+          button.bid__form-submit(type="submit") отправить
+          .bid__form-note Нажимая на кнопку “получить консультацию”, вы соглашаетесь на обработку персональных данных
+      .bid__promo 
+        span Не стоит<br> откладывать лечение!
         span.text_sep 
-        span.text_yellow прямо сейчас!
-      form.bid__form
-        label.bid__form-label 
-          input.bid__form-field(type="text" placeholder="Ваше имя")
-        label.bid__form-label 
-          input.bid__form-field(type="text" placeholder="Ваш телефон")
-        button.bid__form-submit(type="submit") отправить
-        .bid__form-note Нажимая на кнопку “получить консультацию”, вы соглашаетесь на обработку персональных данных
-    .bid__promo 
-      span Не стоит откладывать лечение!
-      span.text_sep 
-      span.text_yellow Шанс пройти весь курс лечения<br> в Ваших руках!
+        span.text_yellow Шанс пройти весь<br> курс лечения<br> в Ваших руках!
 section.addresses-sec.bg_blue 
   .container
     ul.list.addresses

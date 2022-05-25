@@ -5,18 +5,12 @@
 	max-width 1000px
 	margin 0 auto
 	padding: 0 15px
-	@media (max-width: 1200px) 
-		padding 0 10px
-
-
-
 
 // футер к низу
 
 body 
 	display flex
 	flex-direction column
-
 
 .main 
 	flex 1
@@ -37,4 +31,19 @@ body
 .bg_blue {
 	background: $blue;
   color: #fff;
+}
+.image-fit img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain	
+}
+.desk_hidden {
+	display none
+}
+@media (max-width:$m) {
+	.desk_hidden {
+		display:block
+		}
+	.mobile_hidden {
+		display:none}	
 }

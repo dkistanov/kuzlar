@@ -33,17 +33,18 @@
               <form class="hero__contact-us"> 
                 <div class="contact-us__text"> 
                   <h3 class="contact-us__title">Оставьте заявку и узнайте о возможности <span class="text_yellow">бесплатного</span> лечения</h3>
-                  <div class="contanct-us__note">Нажимая на кнопку “Получить консультацию” вы соглашаетесь на обработку персональных данных</div>
+                  <div class="contanct-us__note mobile_hidden">Нажимая на кнопку “Получить консультацию” вы соглашаетесь на обработку персональных данных</div>
                 </div>
                 <ul class="list contact-us__labels"> 
                   <li class="contact-us__label"> 
                     <input class="contact-us__field" type="text" placeholder="ФИО">
                   </li>
                   <li class="contact-us__label"> 
-                    <input class="contact-us__field" type="text" placeholder="Телефон">
+                    <input class="contact-us__field" type="text" placeholder="Телефон" data-tel-input>
                   </li>
                 </ul>
                 <button class="contact-us__btn" type="submit">Получить консультацию</button>
+                <div class="contanct-us__note desk_hidden">Нажимая на кнопку “Получить консультацию” вы соглашаетесь на обработку персональных данных</div>
               </form>
             </div>
           </div>
@@ -79,7 +80,7 @@
                 <li class="symptom"><span class="sypmtom__text">Побледнение цветов</span></li>
               </ul>
               <ul class="sypmtoms__perfomance list">
-                <li class="symptom__perfomance active-sypmtom"> 
+                <li class="symptom__perfomance active-symptom"> 
                   <figure class="perfomance__pic"> <img src="./app/img/content/symptoms-pic.png" alt=""></figure>
                 </li>
                 <li class="symptom__perfomance"> 
@@ -132,6 +133,10 @@
                   <div class="stage__count text_uppercase">4-5 стадия полная катаракта</div>
                 </div>
                 <div class="stage__desc">Хрусталик становится полностью мутным, зрение значительно ухудшается, вплоть до полной слепоты, когда отсутствует предметное зрение и человек различает только свет. На этой стадии незамедлительно следует решить вопрос об операции.</div>
+              </li>
+              <li class="stage stage_blue desk_hidden"> 
+                <div class="stage__name-block"><span class="stage__name">Процесс <br>помутнения хрусталика необратим!</span></div>
+                <div class="stage__desc"> <span>Не ждите полного созревания катаркты, не теряйте зрение!</span><span class="text_sep"> </span><span>Врачи рекомендуют проводить лечение катаракты, как только она начинает мешать нормальной зрительной жизни.</span></div>
               </li>
             </ul>
             <div class="therapy__note"> 
@@ -230,7 +235,35 @@
         <section class="geo-sec bg_grey"> 
           <div class="container"> 
             <h2 class="geo__title sec_title">У нас проходят бесплатное лечение по ОМС пациенты со всей России!</h2>
-            <figure class="geo__pic"> <img src="./app/img/content/map.png" alt=""></figure>
+            <figure class="geo__pic mobile_hidden"> <img src="./app/img/content/map.png" alt=""></figure>
+            <ul class="desk_hidden geo__towns list"> 
+              <li class="town">Москва</li>
+              <li class="town">Санкт-Петербург</li>
+              <li class="town">Севастополь</li>
+              <li class="town">Орел</li>
+              <li class="town">Тула</li>
+              <li class="town">Ярославль</li>
+              <li class="town">Сыктывкар</li>
+              <li class="town">Воронеж</li>
+              <li class="town">Нижний Новгород</li>
+              <li class="town">Ростов-на-Дону</li>
+              <li class="town">Казань</li>
+              <li class="town">Пермь</li>
+              <li class="town">Краснодар</li>
+              <li class="town">Самара</li>
+              <li class="town">Ижевск</li>
+              <li class="town">Тюмень</li>
+              <li class="town">Ессентуки</li>
+              <li class="town">Волгоград</li>
+              <li class="town">Уфа</li>
+              <li class="town">Екатеринбург</li>
+              <li class="town">Омск</li>
+              <li class="town">Новосибирск</li>
+              <li class="town">Красноярск</li>
+              <li class="town">Иркутск</li>
+              <li class="town">Хабаровск</li>
+              <li class="town">Владивосток</li>
+            </ul>
           </div>
         </section>
         <section class="features-sec bg_blue"> 
@@ -253,87 +286,129 @@
         <section class="docs-sec"> 
           <div class="container"> 
             <h2 class="docs__title sec_title">Врачи</h2>
-            <div class="docs__slider swiper slider"> 
-              <div class="docs swiper-wrapper">
-                <div class="slide-default swiper-slide">
-                  <figure class="slide__pic"> <img src="./app/img/content/doctors.png" alt=""></figure>
-                  <div class="slide__info"><span class="slide__name">Абдурахманова Эльмира Эриковна</span>
-                    <div class="slide__about">Врач-офтальмолог первой категории, ведущий офтальмохирург</div>
-                    <div class="slide__features">
-                      <div class="slide__feature">
-                        <h4 class="slide__feature-name">Стаж работы</h4><span class="slide__feature-desc">9 лет</span>
+            <div class="slider-wrp"> 
+              <div class="docs__slider swiper slider"> 
+                <div class="docs swiper-wrapper">
+                  <div class="slide-default swiper-slide">
+                    <figure class="slide__pic"> <img src="./app/img/content/doctors.png" alt=""></figure>
+                    <div class="slide__info"><span class="slide__name">Абдурахманова Эльмира Эриковна</span>
+                      <div class="slide__about">Врач-офтальмолог первой категории, ведущий офтальмохирург</div>
+                      <div class="slide__features">
+                        <div class="slide__feature">
+                          <h4 class="slide__feature-name">Стаж работы</h4><span class="slide__feature-desc">9 лет</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slide-default swiper-slide">
+                    <figure class="slide__pic"> <img src="./app/img/content/doctors.png" alt=""></figure>
+                    <div class="slide__info"><span class="slide__name">Абдурахманова Эльмира Эриковна</span>
+                      <div class="slide__about">Врач-офтальмолог первой категории, ведущий офтальмохирург</div>
+                      <div class="slide__features">
+                        <div class="slide__feature">
+                          <h4 class="slide__feature-name">Стаж работы</h4><span class="slide__feature-desc">9 лет</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slide-default swiper-slide">
+                    <figure class="slide__pic"> <img src="./app/img/content/doctors.png" alt=""></figure>
+                    <div class="slide__info"><span class="slide__name">Абдурахманова Эльмира Эриковна</span>
+                      <div class="slide__about">Врач-офтальмолог первой категории, ведущий офтальмохирург</div>
+                      <div class="slide__features">
+                        <div class="slide__feature">
+                          <h4 class="slide__feature-name">Стаж работы</h4><span class="slide__feature-desc">9 лет</span>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
+                <div class="swiper-button-prev slider-arrow arrow_left"> </div>
+                <div class="swiper-button-next slider-arrow arrow_right"></div>
               </div>
-              <div class="swiper-button-prev slider-arrow arrow_left"> </div>
-              <div class="swiper-button-next slider-arrow arrow_right"></div>
             </div>
           </div>
         </section>
         <section class="equipments-sec"> 
           <div class="container"> 
             <h2 class="equipments__title sec_title">Оборудование</h2>
-            <div class="equipments__slider swiper slider"> 
-              <div class="equipments swiper-wrapper">
-                <div class="slide-default swiper-slide">
-                  <figure class="slide__pic"> <img src="./app/img/content/equipment.png" alt=""></figure>
-                  <div class="slide__info"><span class="slide__name">Установка офтальмологическая infiniti Vision System, ALCON (США)</span>
-                    <div class="slide__about">Офтальмологическая установка является эффективным и надежным оборудованием используемым при микрохирургических операциях по удалению катаракты с возможной последующей имплантацией интраокулярной линзы (ИОЛ). Также прибор применяют при различных паталогиях переднего отдела глаза, при удалении стекловидного тела и коагуляции. На сегодняшний день данная установка пользуется огромным спросом в клиниках по всему миру и считается одним из лучших среди аналогов. </div>
+            <div class="slider-wrp"> 
+              <div class="equipments__slider swiper slider"> 
+                <div class="equipments swiper-wrapper">
+                  <div class="slide-default swiper-slide">
+                    <figure class="slide__pic"> <img src="./app/img/content/equipment.png" alt=""></figure>
+                    <div class="slide__info"><span class="slide__name">Установка офтальмологическая infiniti Vision System, ALCON (США)</span>
+                      <div class="slide__about">Офтальмологическая установка является эффективным и надежным оборудованием используемым при микрохирургических операциях по удалению катаракты с возможной последующей имплантацией интраокулярной линзы (ИОЛ). Также прибор применяют при различных паталогиях переднего отдела глаза, при удалении стекловидного тела и коагуляции. На сегодняшний день данная установка пользуется огромным спросом в клиниках по всему миру и считается одним из лучших среди аналогов. </div>
+                    </div>
+                  </div>
+                  <div class="slide-default swiper-slide">
+                    <figure class="slide__pic"> <img src="./app/img/content/equipment.png" alt=""></figure>
+                    <div class="slide__info"><span class="slide__name">Установка офтальмологическая infiniti Vision System, ALCON (США)</span>
+                      <div class="slide__about">Офтальмологическая установка является эффективным и надежным оборудованием используемым при микрохирургических операциях по удалению катаракты с возможной последующей имплантацией интраокулярной линзы (ИОЛ). Также прибор применяют при различных паталогиях переднего отдела глаза, при удалении стекловидного тела и коагуляции. На сегодняшний день данная установка пользуется огромным спросом в клиниках по всему миру и считается одним из лучших среди аналогов. </div>
+                    </div>
+                  </div>
+                  <div class="slide-default swiper-slide">
+                    <figure class="slide__pic"> <img src="./app/img/content/equipment.png" alt=""></figure>
+                    <div class="slide__info"><span class="slide__name">Установка офтальмологическая infiniti Vision System, ALCON (США)</span>
+                      <div class="slide__about">Офтальмологическая установка является эффективным и надежным оборудованием используемым при микрохирургических операциях по удалению катаракты с возможной последующей имплантацией интраокулярной линзы (ИОЛ). Также прибор применяют при различных паталогиях переднего отдела глаза, при удалении стекловидного тела и коагуляции. На сегодняшний день данная установка пользуется огромным спросом в клиниках по всему миру и считается одним из лучших среди аналогов. </div>
+                    </div>
                   </div>
                 </div>
+                <div class="swiper-button-prev slider-arrow arrow_left"> </div>
+                <div class="swiper-button-next slider-arrow arrow_right"></div>
               </div>
-              <div class="swiper-button-prev slider-arrow arrow_left"> </div>
-              <div class="swiper-button-next slider-arrow arrow_right"></div>
             </div>
           </div>
         </section>
         <section class="reviews-sec bg_grey">
           <div class="container">
-            <h2 class="reviews__title sec_title">Оборудование</h2>
-            <div class="reviews__slider swiper slider"> 
-              <div class="reviews swiper-wrapper">
-                <div class="review swiper-slide">
-                  <figure class="review__pic"> <img src="./app/img/content/review.png" alt=""></figure>
-                  <div class="review__info"><span class="review__text">Установка офтальмологическая infiniti Vision System, ALCON (США)</span>
-                    <h4 class="review__name">Хамидуллина Гульсария Сафиулловна</h4><span class="review__date">23 ноября 2021</span>
+            <h2 class="reviews__title sec_title">Отзывы наших пациентов</h2>
+            <div class="slider-wrp"> 
+              <div class="reviews__slider swiper slider"> 
+                <div class="reviews swiper-wrapper">
+                  <div class="review swiper-slide">
+                    <figure class="review__pic"> <img src="./app/img/content/review.png" alt=""></figure>
+                    <div class="review__info"><span class="review__text">22.11.2021г. мне сделали укол в вашей клинике “Кузляр” по полису ОМС бесплатно. Очень благодарна коллективу и доктору. Успехов вам в дальнейшей работе и здоровья.</span>
+                      <h4 class="review__name">Хамидуллина Гульсария Сафиулловна</h4><span class="review__date">23 ноября 2021</span>
+                    </div>
+                  </div>
+                  <div class="review swiper-slide">
+                    <figure class="review__pic"> <img src="./app/img/content/review.png" alt=""></figure>
+                    <div class="review__info"><span class="review__text">Установка офтальмологическая infiniti Vision System, ALCON (США)</span>
+                      <h4 class="review__name">Хамидуллина Гульсария Сафиулловна</h4><span class="review__date">23 ноября 2021</span>
+                    </div>
+                  </div>
+                  <div class="review swiper-slide">
+                    <figure class="review__pic"> <img src="./app/img/content/review.png" alt=""></figure>
+                    <div class="review__info"><span class="review__text">22.11.2021г. мне сделали укол в вашей клинике “Кузляр” по полису ОМС бесплатно. Очень благодарна коллективу и доктору. Успехов вам в дальнейшей работе и здоровья.</span>
+                      <h4 class="review__name">Хамидуллина Гульсария Сафиулловна</h4><span class="review__date">23 ноября 2021</span>
+                    </div>
                   </div>
                 </div>
-                <div class="review swiper-slide">
-                  <figure class="review__pic"> <img src="./app/img/content/review.png" alt=""></figure>
-                  <div class="review__info"><span class="review__text">Установка офтальмологическая infiniti Vision System, ALCON (США)</span>
-                    <h4 class="review__name">Хамидуллина Гульсария Сафиулловна</h4><span class="review__date">23 ноября 2021</span>
-                  </div>
-                </div>
-                <div class="review swiper-slide">
-                  <figure class="review__pic"> <img src="./app/img/content/review.png" alt=""></figure>
-                  <div class="review__info"><span class="review__text">Установка офтальмологическая infiniti Vision System, ALCON (США)</span>
-                    <h4 class="review__name">Хамидуллина Гульсария Сафиулловна</h4><span class="review__date">23 ноября 2021</span>
-                  </div>
-                </div>
+                <div class="swiper-button-prev slider-arrow arrow_left"> </div>
+                <div class="swiper-button-next slider-arrow arrow_right"></div>
               </div>
-              <div class="swiper-button-prev slider-arrow arrow_left"> </div>
-              <div class="swiper-button-next slider-arrow arrow_right"></div>
             </div>
           </div>
         </section>
         <section class="bid-sec bg_blue"> 
-          <div class="container"> 
-            <div class="bid__block"> 
-              <h2 class="bid__title sec_title"> <span>Запишитесь на операция</span><span class="text_sep"> </span><span class="text_yellow">прямо сейчас!</span></h2>
-              <form class="bid__form">
-                <label class="bid__form-label"> 
-                  <input class="bid__form-field" type="text" placeholder="Ваше имя">
-                </label>
-                <label class="bid__form-label"> 
-                  <input class="bid__form-field" type="text" placeholder="Ваш телефон">
-                </label>
-                <button class="bid__form-submit" type="submit">отправить</button>
-                <div class="bid__form-note">Нажимая на кнопку “получить консультацию”, вы соглашаетесь на обработку персональных данных</div>
-              </form>
+          <div class="container">
+            <div class="bid-wrp"> 
+              <div class="bid__block"> 
+                <h2 class="bid__title sec_title"> <span>Запишитесь на операция</span><span class="text_sep"> </span><span>прямо сейчас!</span></h2>
+                <form class="bid__form">
+                  <label class="bid__form-label"> 
+                    <input class="bid__form-field" type="text" placeholder="Ваше имя">
+                  </label>
+                  <label class="bid__form-label"> 
+                    <input class="bid__form-field" type="text" placeholder="Ваш телефон" data-tel-input>
+                  </label>
+                  <button class="bid__form-submit" type="submit">отправить</button>
+                  <div class="bid__form-note">Нажимая на кнопку “получить консультацию”, вы соглашаетесь на обработку персональных данных</div>
+                </form>
+              </div>
+              <div class="bid__promo"> <span>Не стоит<br> откладывать лечение!</span><span class="text_sep"> </span><span class="text_yellow">Шанс пройти весь<br> курс лечения<br> в Ваших руках!</span></div>
             </div>
-            <div class="bid__promo"> <span>Не стоит откладывать лечение!</span><span class="text_sep"> </span><span class="text_yellow">Шанс пройти весь курс лечения<br> в Ваших руках!</span></div>
           </div>
         </section>
         <section class="addresses-sec bg_blue"> 
@@ -396,12 +471,14 @@
               <div class="footer-col"> 
                 <p>ООО “Клиника Кузляр”</p>
                 <p>ИНН: 1660340566 <br> КПП: 166001001 <br> ОГРН: 12016000004891</p>
-                <p>Юридический адрес: 420073 РТ, г.Казань, <br> ул. Аделя Кутуя дом 44а пом.7 <br></p>
+                <p>Юридический адрес: <br>420073 РТ, г.Казань, <br> ул. Аделя Кутуя дом 44а пом.7 <br></p>
                 <p>Директор: Жернаков Станислав Викторович</p>
               </div>
-              <div class="footer-col"><a class="footer__tel" href="tel:+78432086301">+7 (843) 208-63-01 </a><span>Политика конфиденциальности</span></div>
+              <div class="footer-col">
+                <div class="footer__tel-wrp"> <a class="footer__tel" href="tel:+78432086301">+7 (843) 208-63-01 </a><span>Политика конфиденциальности</span></div>
+              </div>
             </div>
-            <div class="footer__note">Имеютсяпротвопоказания, необходима консультация специалиста.</div>
+            <div class="footer__note">Имеютсяпротвопоказания, <span>необходима консультация специалиста.</span></div>
           </div>
         </footer>
       </div>
