@@ -37,13 +37,13 @@ body
 	height: 100%;
 	object-fit: contain	
 }
-.desk_hidden {
-	display none
+@media (min-width:$m) {
+	.desk_hidden {
+		display none !important
+	}
 }
 @media (max-width:$m) {
-	.desk_hidden {
-		display:block
-		}
+
 	.mobile_hidden {
-		display:none}	
+		display:none !important}	
 }

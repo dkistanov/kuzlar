@@ -1,3 +1,50 @@
+// hovers
+.header__btn {
+  transition: $transition;
+  &:hover {
+    background-color: rgb(25, 146, 233);
+  }
+}
+.contact-us__btn,
+.bid__form-submit {
+  transition: $transition;
+  &:hover {
+    box-shadow: 0 0 15px rgb(245, 239, 163);
+  }
+}
+.step__links a,
+.address__transit {
+  transition: $transition;
+  &.bordered_link:hover {
+    border-color: #ddea38;
+  }
+  &:hover {
+    color: $yellow;
+  }
+}
+.license__certificate a:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: url("../img/content/plus.png") no-repeat;
+  background-size: 100%;
+  opacity: 0.4;
+  background-color: #fff;
+  display: none;
+}
+
+.license__certificate a {
+  position: relative;
+  &:hover:after {
+    display: block;
+  }
+}
+
 .header__logo {
   width: 170px;
 }
@@ -391,6 +438,7 @@ h2 {
   font-size: 16px;
   line-height: 19px;
   display: flex;
+  width: 100%;
   align-items: center;
 }
 
