@@ -2,7 +2,11 @@ $(document).ready(() => {
   $.fancybox.defaults.hideOnOverlayClick = true;
   $.fancybox.defaults.enableEscapeButton = true;
   $.fancybox.defaults.buttons = ["zoom", "fullScreen", "download", "close"];
-
+  $.fancybox.defaults.mobile = {
+    clickSlide: function (current, event) {
+      return "close";
+    },
+  };
   new Swiper(".swiper", {
     navigation: {
       nextEl: ".swiper-button-next",
