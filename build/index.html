@@ -17,7 +17,7 @@
               <div class="header__logo"> 
                 <figure class="logo"> <img src="./app/img/svg/logo.svg" alt="Логотип"></figure>
                 <div class="logo__desc">сеть офтальмологических клиник основана в 2019 году</div>
-              </div><a class="header__btn btn" href="#">Записаться на обследование</a><a class="header__link tel" href="tel:+78432086301">+7 (843) 208-63-01  </a>
+              </div><a class="header__btn btn" href="#">Записаться <br class="tablet_hidden">на обследование</a><a class="header__link tel" href="tel:+78432086301">+7 (843) 208-63-01  </a>
             </div>
           </div>
         </header>
@@ -134,7 +134,7 @@
                 </div>
                 <div class="stage__desc">Хрусталик становится полностью мутным, зрение значительно ухудшается, вплоть до полной слепоты, когда отсутствует предметное зрение и человек различает только свет. На этой стадии незамедлительно следует решить вопрос об операции.</div>
               </li>
-              <li class="stage stage_blue desk_hidden"> 
+              <li class="stage stage_blue"> 
                 <div class="stage__name-block"><span class="stage__name">Процесс <br>помутнения хрусталика необратим!</span></div>
                 <div class="stage__desc"> <span>Не ждите полного созревания катаркты, не теряйте зрение!</span><span class="text_sep"> </span><span>Врачи рекомендуют проводить лечение катаракты, как только она начинает мешать нормальной зрительной жизни.</span></div>
               </li>
@@ -212,7 +212,12 @@
         <section class="about-sec bg_grey">
           <div class="container"> 
             <div class="about-wrp"> 
-              <figure class="about__pic"> <img src="./app/img/content/doc-pic.png" alt="#"></figure>
+              <figure class="about__pic"> 
+                <picture>
+                  <source media="(max-width: 767px)" srcset="./app/img/content/doc-pic-m.png">
+                  <source media="(min-width: 767px)" srcset="./app/img/content/doc-pic.png"><img src="./app/img/content/doc-pic.png" alt="test">
+                </picture>
+              </figure>
               <div class="about__content"> 
                 <h2 class="about__title sec_title">О клинике</h2>
                 <div class="about__desc">В клинике представлен весь спектр самого современного оборудования для диагностики  данного заболевания, а также проходят международные клинические исследования лекарственных препаратов для лечения макулодистрофии.</div>

@@ -386,12 +386,13 @@ h2 {
 }
 
 .symptoms__note-circle {
-  border: 6px solid #000000;
   width: 135px;
   height: 135px;
   border-radius: 50%;
   flex-shrink: 0;
   margin-right: 43px;
+  background: url("../img/svg/circle-eye.svg") no-repeat;
+  background-size: contain;
 }
 .symptom__perfomance:first-child .perfomance__pic:after {
   content: "";
@@ -787,11 +788,9 @@ h2 {
 }
 
 .about-wrp {
-  padding: 5px;
   background: #ffffff;
   /* blue */
   overflow: hidden;
-  border: 1px solid $blue;
   border-radius: 25px;
   display: flex;
 }
@@ -1318,6 +1317,673 @@ footer.footer {
   display: inline-block;
 }
 
+@media (min-width: $l) {
+  .stage_blue .stage__desc span {
+    max-width: none;
+  }
+
+  .stage_blue .stage__desc {
+    align-items: flex-start;
+    justify-content: center;
+    font-weight: bold;
+  }
+
+  .stage__desc .text_sep {
+    width: 60px;
+    margin: 20px 0 14px;
+  }
+
+  .therapy__note {
+    margin-top: 40px;
+  }
+}
+@media (max-width: $l) {
+  .license__certificate a:after {
+    width: 35px;
+    height: 35px;
+  }
+}
+@media (max-width: $l) and (min-width: $m) {
+  .wrapper {
+    overflow-x: hidden;
+  }
+
+  .header__btn {
+    padding: 4px 18px;
+    width: 180px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .header {
+    margin-bottom: 10px;
+    padding-top: 20px;
+  }
+
+  .header__link {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .header-wrp {
+    align-items: flex-start;
+  }
+
+  .hero__background {
+    width: 830px;
+    height: 582px;
+    right: auto;
+    left: 158px;
+    top: -259px;
+  }
+
+  .hero__background:after {
+    border-right-width: 176px;
+    border-top-width: 218px;
+    border-left-width: 47px;
+    filter: blur(14px);
+    border-bottom-width: 67px;
+  }
+
+  .hero__background:before {
+    border-width: 27px;
+  }
+
+  .hero__title {
+    font-size: 40px;
+    line-height: 45px;
+  }
+
+  .hero__subtitle {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .hero__note {
+    margin-top: 10px;
+  }
+
+  .hero__note.text_blue {
+    margin-top: 20px;
+  }
+
+  .hero__contact-us {
+    margin-top: 20px;
+    padding: 20px;
+    margin-bottom: -84px;
+  }
+
+  h3 {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .contact-us__text {
+    margin-right: 30px;
+    max-width: 223px;
+    flex-shrink: 0;
+  }
+
+  .contanct-us__note {
+    margin-top: 10px;
+  }
+
+  .contact-us__field {
+    font-size: 12px;
+    line-height: 15px;
+    padding: 12px;
+    width: 100%;
+  }
+
+  .contact-us__label:not(:last-child) {
+    margin-bottom: 12px;
+  }
+
+  .contact-us__labels {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    flex-grow: 1;
+  }
+
+  .contact-us__btn {
+    padding: 27px 12px;
+    max-width: 167px;
+  }
+
+  .container {
+    padding: 0 40px;
+  }
+
+  .cataract-sec {
+    padding-top: 124px;
+    padding-bottom: 40px;
+  }
+
+  .cataract-wrp {
+    padding: 40px 10px 10px;
+  }
+
+  .cataract__types {
+    padding: 0 30px;
+    margin-bottom: 40px;
+  }
+
+  .type__name {
+    margin-bottom: 40px;
+  }
+
+  .cataract__title {
+    font-size: 20px;
+    line-height: 24px;
+    padding: 0 20px;
+  }
+
+  .cataract__desc {
+    padding: 0 20px;
+    max-width: none;
+    margin-bottom: 20px;
+  }
+
+  .cataract__note {
+    padding: 20px 30px 20px 20px;
+    margin: 0;
+  }
+
+  .cataract__note br {
+    display: none;
+  }
+
+  .symptoms-sec {
+    padding: 40px 0;
+  }
+
+  h2 {
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+  }
+
+  .symptom {
+    min-height: 60px;
+    padding: 11px 60px 11px 20px;
+    background-size: 32px;
+  }
+
+  .symptom:not(:last-child) {
+    margin-bottom: 38px;
+  }
+
+  .perfomance__pic {
+    height: 451px;
+  }
+
+  .sypmtoms__perfomance {
+    display: flex;
+    width: calc(50% - 16px);
+  }
+
+  .symptoms {
+    width: 50%;
+  }
+
+  .symptoms__note {
+    margin-top: 40px;
+    padding: 20px;
+  }
+
+  .symptoms__note-title {
+    text-align: left;
+    margin-bottom: 10px;
+    max-width: 390px;
+  }
+
+  .symptoms__note-circle {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+  }
+
+  .stages-sec {
+    padding-top: 40px;
+  }
+
+  .sec_desc {
+    text-align: center;
+  }
+
+  .stages {
+    margin-top: 20px;
+  }
+
+  .stage:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  .stage__name {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .stage__desc {
+    font-size: 12px;
+    line-height: 15px;
+    padding: 22px 20px;
+  }
+
+  .stage__name-block {
+    max-width: 210px;
+  }
+
+  .stage__count {
+    padding: 8px 26px;
+    min-height: 61px;
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .stage.stage_blue {
+    margin-top: 20px;
+  }
+
+  .stage_blue .stage__name-block {
+    justify-content: center;
+  }
+
+  .stage_blue .stage__desc {
+    align-items: flex-start;
+    font-weight: bold;
+    justify-content: center;
+  }
+
+  .stage_blue .stage__desc span {
+    max-width: none;
+  }
+
+  .stage__desc .text_sep {
+    width: 44px;
+    margin: 25px 0 15px;
+    border-width: 3px;
+  }
+
+  .therapy__note {
+    margin: 20px 0 -85px;
+    padding: 33px 42px;
+  }
+
+  .therapy__note-title {
+    text-align: left;
+  }
+
+  .therapy__note-pic {
+    width: 109px;
+    margin-right: 30px;
+  }
+
+  .therapy__note-desc {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .therapy__note-text {
+    max-width: none;
+    margin-top: 5px;
+  }
+
+  .therapy-sec {
+    padding-top: 125px;
+  }
+
+  .therapy__operation {
+    margin-top: 40px;
+  }
+
+  .operation__title {
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 20px;
+  }
+
+  .advantage__name {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .operation__advantage {
+    padding: 12px 0;
+  }
+
+  .therapy__omc {
+    margin-top: 45px;
+    justify-content: center;
+  }
+  .therapy__desc {
+    max-width: none;
+  }
+  .omc__desc {
+    margin-left: 20px;
+    font-size: 16px;
+    line-height: 19px;
+    max-width: 408px;
+    padding: 5px 0;
+    padding-left: 20px;
+  }
+
+  .omc__desc br {
+    display: none;
+  }
+
+  .steps-sec {
+    padding: 40px 0;
+  }
+
+  .steps__title {
+    margin: 0 auto;
+  }
+
+  .steps {
+    margin-top: 54px;
+  }
+
+  .step:nth-child(3) {
+    min-width: 0;
+  }
+
+  .step {
+    width: calc((100% - 90px) / 4);
+    margin-right: 30px;
+  }
+
+  .about-sec {
+    padding-bottom: 40px;
+  }
+
+  .equipments-sec {
+    padding-bottom: 40px;
+  }
+
+  .step__desc {
+    font-size: 12px;
+    line-height: 15px;
+    max-width: 133px;
+  }
+
+  .step__links {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .about__pic {
+    width: 228px;
+  }
+
+  .about-wrp {
+    padding: 0;
+    border: none;
+  }
+
+  .about__content {
+    margin-left: 24px;
+    padding: 20px 55px 20px 0;
+  }
+
+  .about__title {
+    text-align: left;
+  }
+
+  .about__desc {
+    margin-top: 20px;
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .about__doc-post {
+    max-width: none;
+    font-size: 12px;
+    line-height: 15px;
+    margin-top: 10px;
+  }
+
+  .about__license {
+    margin-top: 20px;
+  }
+
+  .license__present {
+    margin-right: 39px;
+  }
+
+  .license__certificate {
+    width: 61px;
+    height: 91px;
+    margin-right: 13px;
+  }
+
+  .geo__title {
+    max-width: 390px;
+    margin: 0 auto;
+  }
+
+  .geo__pic {
+    margin-top: 40px;
+  }
+
+  .geo-sec {
+    padding-bottom: 40px;
+  }
+
+  .features-sec {
+    padding: 40px 0;
+  }
+
+  .features__title {
+    margin: 0 auto;
+  }
+
+  .feature {
+    padding: 40px;
+  }
+
+  .feature__pic {
+    width: 107px;
+    height: 107px;
+  }
+
+  .feature__name {
+    padding: 0 10px;
+    width: 250px;
+    font-size: 20px;
+    line-height: 24px;
+    margin: 0 33px 0 40px;
+  }
+  .feature__desc {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .feature_lower {
+    font-size: 12px;
+    line-height: 15px;
+    margin-right: -8px;
+  }
+
+  .feature:first-child .feature__name {
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: -0.02em;
+  }
+
+  .docs-sec {
+    padding: 40px 0;
+  }
+
+  .docs__title {
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  .slider {
+    margin: 20px 60px 0;
+  }
+
+  .slide__pic {
+    width: 280px;
+    height: 280px;
+    margin-right: 35px;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 26px;
+    height: 50px;
+    margin-top: -25px;
+  }
+
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+    font-size: 50px;
+    font-weight: bold;
+  }
+
+  .slide__name {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .slide__about {
+    margin-top: 10px;
+  }
+
+  .slide__features {
+    margin-top: 10px;
+  }
+
+  .slide__info {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  h4 {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .reviews-sec {
+    padding: 40px 0;
+  }
+
+  .reviews__slider {
+    margin: 20px 60px 0 100px;
+  }
+
+  .review__pic {
+    width: 145px;
+    height: 145px;
+    margin-right: 18px;
+  }
+
+  .review__info {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .review__date {
+    margin-top: 10px;
+  }
+
+  .bid-sec {
+    padding: 40px 0;
+  }
+
+  .bid__block {
+    max-width: 360px;
+    margin-right: 34px;
+  }
+
+  .bid__promo {
+    margin: 0 auto;
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  .bid__title {
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  .bid__form-note {
+    margin: 10px -10px 0;
+  }
+
+  .addresses-sec {
+    padding-bottom: 40px;
+  }
+
+  .address__row-title {
+    text-align: left;
+    margin-bottom: 6px;
+  }
+
+  .address__row-text br {
+    content: "";
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  .address__row-text {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .address:nth-child(2) {
+    width: calc((100% / 3) - 30px);
+  }
+
+  .address {
+    padding: 0 30px;
+    flex-grow: 1;
+  }
+
+  .address__row:not(:last-child) {
+    margin-bottom: 25px;
+  }
+
+  .address__transit {
+    font-size: 12px;
+    line-height: 15px;
+    max-width: 111px;
+  }
+
+  footer.footer {
+    padding: 40px 0 0;
+  }
+
+  .footer-col:first-child {
+    width: 60%;
+    padding-right: 40px;
+  }
+
+  .footer-col:last-child {
+    margin-left: 32px;
+    width: calc(100% - 60% - 32px);
+    align-items: center;
+  }
+  .footer__tel {
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  .footer__tel-wrp {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .footer__note {
+    font-size: 37px;
+    line-height: 44px;
+    letter-spacing: -0.045em;
+    margin: 40px -40px 0;
+    text-align: center;
+  }
+}
+
 @media (max-width: $m) {
   .hero__contact-us {
     flex-direction: column;
@@ -1764,6 +2430,7 @@ footer.footer {
   .about__pic {
     width: calc(100% + 3px);
     margin-left: -3px;
+    max-height: 600px;
   }
 
   .about__desc {

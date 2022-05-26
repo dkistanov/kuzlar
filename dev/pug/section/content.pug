@@ -96,7 +96,7 @@ section.stages-sec.bg_grey
           span.stage__name Зрелая катаракта
           .stage__count.text_uppercase 4-5 стадия полная катаракта
         .stage__desc Хрусталик становится полностью мутным, зрение значительно ухудшается, вплоть до полной слепоты, когда отсутствует предметное зрение и человек различает только свет. На этой стадии незамедлительно следует решить вопрос об операции.
-      li.stage.stage_blue.desk_hidden 
+      li.stage.stage_blue 
         .stage__name-block
           span.stage__name Процесс <br>помутнения хрусталика необратим!
         .stage__desc 
@@ -173,7 +173,10 @@ section.about-sec.bg_grey
   .container 
     .about-wrp 
       figure.about__pic 
-        img(src="./app/img/content/doc-pic.png", alt="#")
+        picture
+          source(media="(max-width: 767px)" srcset="./app/img/content/doc-pic-m.png")
+          source(media="(min-width: 767px)" srcset="./app/img/content/doc-pic.png")
+          img(src="./app/img/content/doc-pic.png" alt="test")
       .about__content 
         h2.about__title.sec_title О клинике
         .about__desc В клинике представлен весь спектр самого современного оборудования для диагностики  данного заболевания, а также проходят международные клинические исследования лекарственных препаратов для лечения макулодистрофии.
