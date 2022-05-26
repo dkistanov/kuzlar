@@ -1077,10 +1077,10 @@ h2 {
 }
 
 .address {
-  width: calc((100% / 3) - 102px);
+  width: calc((100% / 3) - 80px);
   border-right: 3px solid #1a92e9;
-  padding-right: 66px;
-  padding-left: 66px;
+  padding-right: 50px;
+  padding-left: 50px;
   display: flex;
   flex-direction: column;
   box-sizing: content-box;
@@ -1127,7 +1127,7 @@ h2 {
 }
 
 .address:nth-child(2) {
-  width: calc((100% / 3) - 67px);
+  width: calc((100% / 3) - 50px);
 }
 footer.footer {
   background: #2d2d2d;
@@ -1316,7 +1316,120 @@ footer.footer {
   color: #acacac;
   display: inline-block;
 }
+.cataract-wrp {
+  padding: 53px 27px 30px;
+}
 
+.cataract__pic {
+  padding: 0 53px;
+  margin-bottom: 40px;
+}
+
+.cataract__title {
+  padding: 0 25px;
+}
+
+.cataract__desc {
+  padding: 0 25px;
+}
+
+.cataract__note {
+  margin: 0;
+  padding: 30px 25px;
+}
+
+.symptom {
+  background-size: 42px 33px;
+  padding: 20px 40px;
+}
+
+.symptoms__note {
+  padding-left: 40px;
+}
+
+.therapy__note {
+  padding-left: 100px;
+}
+.therapy__note {
+  padding: 25px 110px 25px 100px;
+}
+
+.therapy__note-pic {
+  margin-right: 70px;
+}
+
+.step__links {
+  font-weight: bold;
+}
+
+.about__pic {
+  width: 483px;
+}
+
+.step__links .bordered_link {
+  border-width: 2px;
+}
+
+.about__pic img {
+  object-position: 73%;
+}
+
+.about__content {
+  margin-left: 0;
+}
+
+.license__certificate {
+  width: 80px;
+  height: 125px;
+  margin-right: 21px;
+}
+
+.about__license {
+  align-items: center;
+}
+
+.slide__pic {
+  width: 340px;
+  height: 386px;
+  margin-right: 65px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  width: 25px;
+  height: 50px;
+  margin-top: -25px;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 50px;
+}
+
+.slide__pic img {
+  object-fit: contain;
+}
+
+.review__pic {
+  padding: 10px;
+  border: 6px solid #ddea38;
+  position: relative;
+}
+
+.review__pic:after {
+  content: "";
+  position: absolute;
+  bottom: 1px;
+  right: -6px;
+  width: 60px;
+  height: 60px;
+  background-image: url("../img/svg/message.svg");
+  background-color: #0d72ba;
+  border-radius: 50%;
+  background-size: 32px;
+  background-repeat: no-repeat;
+  background-position: center calc(50% + 1px);
+}
 @media (min-width: $l) {
   .stage_blue .stage__desc span {
     max-width: none;
@@ -1506,7 +1619,7 @@ footer.footer {
   .symptom {
     min-height: 60px;
     padding: 11px 60px 11px 20px;
-    background-size: 32px;
+    background-size: 24px;
   }
 
   .symptom:not(:last-child) {
@@ -1713,7 +1826,7 @@ footer.footer {
   }
 
   .about__pic {
-    width: 228px;
+    width: 300px;
   }
 
   .about-wrp {
@@ -1838,7 +1951,7 @@ footer.footer {
 
   .swiper-button-next:after,
   .swiper-button-prev:after {
-    font-size: 50px;
+    font-size: 35px;
     font-weight: bold;
   }
 
@@ -1878,7 +1991,11 @@ footer.footer {
     height: 145px;
     margin-right: 18px;
   }
-
+  .review__pic:after {
+    width: 40px;
+    height: 40px;
+    background-size: 24px;
+  }
   .review__info {
     font-size: 12px;
     line-height: 15px;
@@ -2804,5 +2921,13 @@ footer.footer {
     font-size: 30px;
     line-height: 22px;
     letter-spacing: 0.11em;
+  }
+  .cataract__desc {
+    padding: 0 20px;
+    max-width: none;
+  }
+
+  .cataract__note {
+    padding: 20px;
   }
 }

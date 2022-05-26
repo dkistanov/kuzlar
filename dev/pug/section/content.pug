@@ -23,15 +23,11 @@ section.hero-sec
 section.cataract-sec.bg_grey
   .container
     .cataract-wrp 
-      .cataract__types
-        .cataract__type
-          h4.type__name Прозрачный хрусталик
-          figure.type__pic 
-            img(src="./app/img/content/transparent-lens.png", alt="Прозрачный хрусталик")
-        .cataract__type
-          h4.type__name Мутный хрусталик
-          figure.type__pic 
-            img(src="./app/img/content/turbid-lens.png", alt="Мутный хрусталик")
+      .cataract__pic
+        picture
+          source(media="(max-width: 767px)" srcset="./app/img/content/lens-m.png")
+          source(media="(min-width: 767px)" srcset="./app/img/content/lens.png")
+          img(src="./app/img/content/lens.png", alt="")
       h3.cataract__title Катаракта
       .cataract__desc это частичное или полное помутнение хрусталика глаза. Хрусталик от природы прозрачный и играет роль естественной линзы, преломляющей световые лучи и пропускающей их к сетчатке.       Потерявший прозрачность хрусталик при катаракте перестаёт пропускать свети зрение ухудшается вплоть до полной потери.
       .cataract__note Катаракта встречается в любом возрасте. Но чаще всего катаракта бывает возрастная. <br>По статистике Всемирной организации здравоохранения, в 70-80% случаев катаракта развивается у людей после 70 лет. Однако возрастная катаракта может развиться и раньше, в возрасте 45 - 50 лет.
