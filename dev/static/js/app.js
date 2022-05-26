@@ -2,9 +2,6 @@ $(document).ready(() => {
   $.fancybox.defaults.hideOnOverlayClick = true;
   $.fancybox.defaults.enableEscapeButton = true;
   $.fancybox.defaults.buttons = ["zoom", "fullScreen", "download", "close"];
-  $.fancybox.defaults.afterShow = function (instance, current) {
-    instance.scaleToFit();
-  };
 
   new Swiper(".swiper", {
     navigation: {
