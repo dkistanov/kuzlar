@@ -46,7 +46,7 @@
 }
 
 .header__logo {
-  width: 170px;
+  width: 180px;
 }
 
 .header-wrp {
@@ -1129,9 +1129,9 @@ h2 {
 .address:nth-child(2) {
   width: calc((100% / 3) - 50px);
 }
-footer.footer {
+.footer {
   background: #2d2d2d;
-  padding: 60px 0;
+  padding: 60px 0 10px;
   color: #929292;
   font-weight: 500;
   font-size: 24px;
@@ -1363,7 +1363,7 @@ footer.footer {
 }
 
 .about__pic {
-  width: 483px;
+  width: 400px;
 }
 
 .step__links .bordered_link {
@@ -1429,6 +1429,163 @@ footer.footer {
   background-size: 32px;
   background-repeat: no-repeat;
   background-position: center calc(50% + 1px);
+}
+.contact-us__text {
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.contact-us__btn {
+  padding: 41px 22px;
+  min-width: 223px;
+}
+
+.contact-us__labels {
+  margin-top: 0;
+}
+
+.hero__contact-us {
+  padding: 40px 47px 40px 40px;
+}
+
+.contact-us__label:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.symptom {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  padding: 15px 55px 15px 50px;
+}
+
+.symptoms__note {
+  background: #ebf0f4;
+}
+
+.stage__name-block {
+  width: 250px;
+  margin-right: 20px;
+}
+
+.stage__desc {
+  padding: 10px 35px;
+}
+
+.therapy__note-pic {
+  width: 119px;
+  height: 125px;
+}
+
+.therapy__note-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.therapy__note {
+  padding: 25px 55px 25px 70px;
+}
+
+.therapy__desc {
+  max-width: none;
+}
+
+.therapy__desc span {
+  font-weight: bold;
+}
+
+.therapy__desc p {
+  max-width: 852px;
+}
+
+.therapy__desc p:last-child {
+  max-width: none;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.omc__desc {
+  font-size: 20px;
+  line-height: 24px;
+}
+.therapy__note {
+  padding: 25px 55px 25px 70px;
+}
+.about__pic {
+  margin-right: 35px;
+  position: relative;
+}
+
+.about__pic:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 100%;
+  background: linear-gradient(
+    270deg,
+    #ffffff 0%,
+    rgba(255, 255, 255, 0) 85.29%
+  );
+}
+
+.geo__title {
+  font-weight: 700;
+  max-width: 552px;
+}
+
+.geo__pic {
+  margin-top: 50px;
+}
+
+.features__title {
+  max-width: 512px;
+}
+
+h2 {
+  font-size: 26px;
+  line-height: 32px;
+}
+
+.steps__title {
+  max-width: 454px;
+}
+
+.reviews__slider {
+  margin-top: 40px;
+}
+
+.address__row-title {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.footer__tel-wrp {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.footer-col p {
+  max-width: 383px;
+}
+
+.footer-col:first-child {
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.footer-col p:last-child {
+  max-width: 206px;
+}
+
+.footer__note {
+  font-size: 48px;
+  line-height: 58px;
+  /* identical to box height */
+  font-weight: 300;
+  letter-spacing: -0.045em;
 }
 @media (min-width: $l) {
   .stage_blue .stage__desc span {
@@ -2068,7 +2225,7 @@ footer.footer {
     max-width: 111px;
   }
 
-  footer.footer {
+  .footer {
     padding: 40px 0 0;
   }
 
@@ -2102,6 +2259,10 @@ footer.footer {
 }
 
 @media (max-width: $m) {
+  h2 {
+    font-size: 1.5rem;
+    line-height: 1.8125rem;
+  }
   .hero__contact-us {
     flex-direction: column;
   }
@@ -2313,7 +2474,7 @@ footer.footer {
 
   .symptom {
     background-image: none;
-    padding: 11px;
+    padding: 11px 15px;
     justify-content: center;
     min-height: 60px;
   }
@@ -2440,10 +2601,17 @@ footer.footer {
   .therapy__operation {
     margin-top: 40px;
   }
+  .omc__desc {
+    font-size: 16px;
+    line-height: 19px;
+  }
 
+  .about__content {
+    z-index: 1;
+  }
   .operation__title {
     text-align: center;
-    max-width: 156px;
+    max-width: 200px;
     margin: 0 auto 20px;
   }
 
@@ -2589,7 +2757,7 @@ footer.footer {
   }
 
   .geo__title {
-    max-width: 250px;
+    max-width: 273px;
     margin: 0 auto;
     text-align: center;
   }
@@ -2599,7 +2767,7 @@ footer.footer {
   }
 
   .features__title {
-    max-width: 223px;
+    max-width: 241px;
     margin: 0 auto;
     text-align: center;
   }
@@ -2859,7 +3027,7 @@ footer.footer {
     text-align: center;
   }
 
-  footer.footer {
+  .footer {
     padding: 34px 0 10px;
     font-size: 16px;
     line-height: 19px;
@@ -2926,7 +3094,10 @@ footer.footer {
     padding: 0 20px;
     max-width: none;
   }
-
+  .footer__tel-wrp {
+    font-size: 16px;
+    line-height: 19px;
+  }
   .cataract__note {
     padding: 20px;
   }
